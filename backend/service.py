@@ -4,10 +4,10 @@ from diffusers import StableDiffusionPipeline, DPMSolverMultistepScheduler
 from diffusers.models import AutoencoderKL
 
 # モデル設定
-# https://huggingface.co/andite/anything-v4.0
+# https://huggingface.co/runwayml/stable-diffusion-v1-5
 # 自由にDiffusionモデルを変更してください
 # ただしライセンスには注意してください
-model_id = "andite/anything-v4.0"
+model_id = "runwayml/stable-diffusion-v1-5"
 
 # VAEの設定
 vae_id = "./vae/anythingv4_vae"

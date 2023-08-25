@@ -1,11 +1,11 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import { imagesType } from './types'
+import { useState } from 'react';
+import { imagesType } from './types';
 
-import Create from './create'
-import Generate from './generate'
-import Modal from './modal'
+import Create from './create';
+import Generate from './generate';
+import Modal from './modal';
 
 const testImages: imagesType[] = [
   {
@@ -28,19 +28,19 @@ const testImages: imagesType[] = [
     steps: 30,
     seed: 1,
   },
-]
+];
 
 // メイン
 const Main = () => {
-  const [loading, setLoading] = useState(false)
-  const [images, setImages] = useState<imagesType[] | null>(null)
-  const [modalOpen, setModalOpen] = useState(false)
-  const [modalData, setModalData] = useState<imagesType | null>(null)
+  const [loading, setLoading] = useState(false);
+  const [images, setImages] = useState<imagesType[] | null>(null);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalData, setModalData] = useState<imagesType | null>(null);
 
   // モーダルを閉じる
   const closeModal = () => {
-    setModalOpen(false)
-  }
+    setModalOpen(false);
+  };
 
   return (
     <div className="grid grid-cols-5 gap-4">
@@ -62,7 +62,7 @@ const Main = () => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;

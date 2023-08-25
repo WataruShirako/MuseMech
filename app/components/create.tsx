@@ -88,7 +88,7 @@ const Create = ({ loading, setLoading, setImages }: CreateType) => {
       };
 
       // 画像生成API呼び出し
-      const response = await fetch('http://localhost:8000/api/generate/', {
+      const response = await fetch('http://localhost:3000/api/generate/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
