@@ -1,19 +1,19 @@
-'use client'
+'use client';
 
-import { imagesType, GenerateType } from './types'
-import Image from 'next/image'
+import { imagesType, GenerateType } from './types';
+import Image from 'next/image';
 
 // 画像表示
 const Generate = ({ loading, images, setModalData, setModalOpen }: GenerateType) => {
   // モーダル表示
   const openModal = (data: imagesType) => {
-    setModalData(data)
-    setModalOpen(true)
-  }
+    setModalData(data);
+    setModalOpen(true);
+  };
 
   return (
     <>
-      <div className="border-b-2 border-blue-100 mb-4 font-bold text-lg">Generation</div>
+      <div className="border-b-2 border-blue-100 mb-4 font-bold text-lg">生成した画像</div>
 
       {loading ? (
         <div className="flex items-center justify-center h-full">
@@ -37,7 +37,7 @@ const Generate = ({ loading, images, setModalData, setModalOpen }: GenerateType)
         <></>
       )}
     </>
-  )
-}
+  );
+};
 
-export default Generate
+export default Generate;

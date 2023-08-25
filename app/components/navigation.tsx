@@ -1,6 +1,6 @@
-'use client'
+'use client';
 
-import Link from 'next/link'
+import Link from 'next/link';
 
 // ナビゲーション
 const Navigation = () => {
@@ -8,11 +8,11 @@ const Navigation = () => {
     <header className="border-b py-5">
       <div className="text-center">
         <Link href="/" className="font-bold text-xl cursor-pointer">
-          FullStackChannel
+          MuseMech
         </Link>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

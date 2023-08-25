@@ -1,25 +1,25 @@
-import { MouseEvent } from 'react'
-import { XMarkIcon } from '@heroicons/react/24/solid'
-import { ModalProps } from './types'
+import { MouseEvent } from 'react';
+import { XMarkIcon } from '@heroicons/react/24/solid';
+import { ModalProps } from './types';
 
-import Image from 'next/image'
+import Image from 'next/image';
 
 // モーダルウィンドウ
 const Modal = ({ isOpen, closeModal, modalData }: ModalProps) => {
   // オープンチェック
-  if (!isOpen) return null
+  if (!isOpen) return null;
 
   // 背景クリック
   const handleBackgroundClick = (e: MouseEvent) => {
-    e.stopPropagation()
+    e.stopPropagation();
     // 閉じる
-    closeModal()
-  }
+    closeModal();
+  };
 
   // モーダルクリック
   const handleModalClick = (e: MouseEvent) => {
-    e.stopPropagation()
-  }
+    e.stopPropagation();
+  };
 
   return (
     <div
@@ -48,23 +48,23 @@ const Modal = ({ isOpen, closeModal, modalData }: ModalProps) => {
           </div>
           <div className="col-span-1">
             <div className="mb-5">
-              <div className="font-bold text-sm mb-1">Prompt</div>
+              <div className="font-bold text-sm mb-1">プロンプト</div>
               <div>{modalData.prompt}</div>
             </div>
 
             <div className="mb-5">
-              <div className="font-bold text-sm mb-1">Negative Prompt</div>
+              <div className="font-bold text-sm mb-1">入れないプロンプト</div>
               <div>{modalData.negative}</div>
             </div>
 
             <div className="grid grid-cols-2 gap-2">
               <div>
-                <div className="font-bold text-sm mb-1">Ratio</div>
+                <div className="font-bold text-sm mb-1">比率</div>
                 <div>{modalData.ratio}</div>
               </div>
 
               <div>
-                <div className="font-bold text-sm mb-1">Size</div>
+                <div className="font-bold text-sm mb-1">サイズ</div>
                 <div>
                   {modalData.width} x {modalData.height}
                 </div>
@@ -84,7 +84,7 @@ const Modal = ({ isOpen, closeModal, modalData }: ModalProps) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Modal
+export default Modal;
